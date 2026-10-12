@@ -1,0 +1,83 @@
+temparary password for admin
+
+SUPER = AdminKKSB
+
+admin = admin@123
+
+
+
+
+<div class="staff">
+                    <table>
+                        <tr>
+                            <td>ID</td><td>:</td><td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td><td>:</td><td>Muhammad Harith Affendi Bin Mohammad Zaini</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td><td>:</td><td>myemail@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Position</td><td>:</td><td>CEO</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td><td>:</td><td>01010101010101</td>
+                        </tr>
+                    </table>
+
+                    <div class="wrapper-button">
+                        <a href="">Edit</a>
+                        <button type="button">Delete</button> 
+                    </div>
+                </div>
+
+                <div class="staff">
+                    <table>
+                        <tr>
+                            <td>ID</td><td>:</td><td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td><td>:</td><td>my name</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td><td>:</td><td>myemail@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Position</td><td>:</td><td>CEO</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td><td>:</td><td>01010101010101</td>
+                        </tr>
+                    </table>
+
+                    <div class="wrapper-button">
+                        <a href="">Edit</a>
+                        <button type="button">Delete</button> 
+                    </div>
+                </div>
+
+                <div class="staff">
+                    <table>
+                        <tr>
+                            <td>ID</td><td>:</td><td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td><td>:</td><td>my name</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td><td>:</td><td>myemail@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Position</td><td>:</td><td>CEO</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td><td>:</td><td>01010101010101</td>
+                        </tr>
+                    </table>
+
+                    <div class="wrapper-button">
+                        <a href="">Edit</a>
+                        <button type="button">Delete</button> 
+                    </div>
+                </div>
