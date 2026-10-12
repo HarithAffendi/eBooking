@@ -1,0 +1,146 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+main {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 90ch;
+    padding: 1em 4em;
+}
+
+.title {
+    justify-content: center;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    font-size: 1em;
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0;
+    margin-top: 0.4em;
+    margin-right: 0.4em;
+}
+
+.req-vehicle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.vehicle, .driver, .task {
+    margin: 0.2em 0;
+    display: flex;
+    align-items: end;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    outline: 2px solid black;
+    text-align: center;
+    align-items: baseline;
+}
+
+.wrapper-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.5em;
+}
+
+.wrapper-img img {
+    height: 3.5em;
+    /* width: 7ch; */
+}
+
+.wrapper-partition {
+    display: flex;
+    margin-bottom: 0.1em;
+}
+
+.fill-name {
+    margin-right: 0.5em;
+}
+
+.sub-name {
+    margin: 0 0.5em;
+}
+
+.underline {
+    border-bottom: 1.5px dotted black;
+}
+
+.partition {
+    flex: 1;
+}
+
+.selection {
+    display: flex;
+    width: 70%;
+}
+
+.office .selection {
+    width: 50%;
+}
+
+.selection .partition {
+    display: flex;
+    align-items: end;
+}
+
+.timedate {
+    padding-left: 1.5em;
+}
+
+.note {
+    font-family: 'Trebuchet MS', sans-serif;
+    width: 95ch;
+    color: #af4242;
+	background-color: #fde8ec;
+    font-size: 1em;
+    display: block;
+    margin: 1em auto;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.2em;
+    margin: 2em auto;
+}
+
+@media print {
+    main {
+        font-size: 12px;
+    }
+
+    section {
+        width: 80%;
+    }
+
+    button {
+        display: none;
+    }
+
+    .note {
+        display: none;
+    }
+}

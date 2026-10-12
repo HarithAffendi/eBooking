@@ -1,0 +1,399 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 03, 2025 at 08:36 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ebooking`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `a_id` int(5) NOT NULL,
+  `a_name` varchar(50) NOT NULL,
+  `a_email` varchar(30) NOT NULL,
+  `a_phone` varchar(12) NOT NULL,
+  `a_position` varchar(20) NOT NULL,
+  `a_type` varchar(10) NOT NULL,
+  `a_password` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`a_id`, `a_name`, `a_email`, `a_phone`, `a_position`, `a_type`, `a_password`) VALUES
+(4, 'KKSB Admin', 'adminkksb@gmail.com', '01010343478', 'KKSB Admin', 'SUPER', '$2y$12$wPQpwqmThFN9Jlapfdq8huB6GsFRQmgqvVkh07CQ7SKi2Bgvujq1.'),
+(5, 'Abu', 'abu@staf.kksbs.edu.my', '01010101010', 'Head of IT', 'eICT', '$2y$12$7b7DVeh1nnH.MAdyt6mHDeYUPRpla9HKq9zv23N7o1kmqdPsIKcu2'),
+(6, 'Mira', 'mira@staf.kksbs.edu.my', '0106477394', 'Head of Facility', 'eFasiliti', '$2y$12$Yt0yoq/4bFlbgulXKDT06ufQIE4Cy.N8664HrW0yPsCn2XbZk/m7y'),
+(7, 'Ahmad', 'ahmad@staf.kksbs.edu.my', '01035676345', 'Head of Vehicle', 'eKenderaan', '$2y$12$EZwcEfBXM7EUGzASnHpXfOLJLSfq3FjY2obAI/IOE.ql5T99RU9Ym');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `driver`
+--
+
+CREATE TABLE `driver` (
+  `d_id` int(7) NOT NULL,
+  `d_name` varchar(50) NOT NULL,
+  `kf_id` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `driver`
+--
+
+INSERT INTO `driver` (`d_id`, `d_name`, `kf_id`) VALUES
+(1, 'megat', 367043),
+(2, 'syakir', 367043),
+(4, 'megat', 1307494),
+(9, 'sheikh', 1561971),
+(10, 'megat', 5137477);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ekenform`
+--
+
+CREATE TABLE `ekenform` (
+  `kf_id` int(7) NOT NULL,
+  `kf_purpose` varchar(70) NOT NULL,
+  `kf_numStudent` int(2) NOT NULL,
+  `kf_numStaff` int(2) NOT NULL,
+  `kf_destination` varchar(50) NOT NULL,
+  `kf_departureDate` date NOT NULL,
+  `kf_departureTime` time NOT NULL,
+  `kf_returnDate` date NOT NULL,
+  `kf_returnTime` time NOT NULL,
+  `kf_startDate` date NOT NULL,
+  `kf_startTime` time NOT NULL,
+  `kf_status` varchar(10) NOT NULL,
+  `kf_available` tinyint(1) NOT NULL,
+  `f_name` varchar(70) NOT NULL,
+  `s_id` int(5) DEFAULT NULL,
+  `a_id` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ekenform`
+--
+
+INSERT INTO `ekenform` (`kf_id`, `kf_purpose`, `kf_numStudent`, `kf_numStaff`, `kf_destination`, `kf_departureDate`, `kf_departureTime`, `kf_returnDate`, `kf_returnTime`, `kf_startDate`, `kf_startTime`, `kf_status`, `kf_available`, `f_name`, `s_id`, `a_id`) VALUES
+(367043, 'test', 0, 0, '0', '2024-11-20', '14:20:00', '2024-11-20', '14:20:00', '2024-11-20', '14:20:00', 'Approved', 1, 'BORANG PERMOHONAN JAWATAN.pdf', 6, 7),
+(1003819, 'k', 1, 1, 'Shah Alam', '2024-12-17', '08:33:00', '2024-12-17', '08:33:00', '2024-12-17', '08:33:00', 'Pending', 0, 'sijil fabrika gerpi.pdf', 8, NULL),
+(1307494, 'con', 0, 4, 'Shah Alam', '2024-12-09', '08:25:00', '2024-12-09', '08:25:00', '2024-12-09', '08:25:00', 'Denied', 1, 'View.pdf', 8, 7),
+(1561971, 'test', 4, 1, 'ke sana', '2024-12-03', '11:16:00', '2024-12-03', '11:16:00', '2024-12-03', '11:16:00', 'Denied', 0, 'MUHAMMAD ALIF ISKANDAR DAT.pdf', 8, 7),
+(5137477, 'ktest', 1, 1, 'teluk intan', '2024-12-17', '08:43:00', '2024-12-17', '08:43:00', '2024-12-17', '08:43:00', 'Pending', 1, 'LOGO MAKWE.pdf', 6, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ekenlist`
+--
+
+CREATE TABLE `ekenlist` (
+  `kl_id` int(10) NOT NULL,
+  `kv_id` int(5) DEFAULT NULL,
+  `kf_id` int(7) NOT NULL,
+  `kl_type` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ekenlist`
+--
+
+INSERT INTO `ekenlist` (`kl_id`, `kv_id`, `kf_id`, `kl_type`) VALUES
+(7, 1, 367043, 'Request'),
+(8, 2, 367043, 'Request'),
+(18, 3, 1561971, 'Request'),
+(20, 3, 1307494, 'Request'),
+(21, 2, 1561971, 'Recommend'),
+(22, 4, 1003819, 'Request'),
+(23, 3, 5137477, 'Request');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ekenvehicle`
+--
+
+CREATE TABLE `ekenvehicle` (
+  `kv_id` int(5) NOT NULL,
+  `kv_name` varchar(20) NOT NULL,
+  `kv_plate` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ekenvehicle`
+--
+
+INSERT INTO `ekenvehicle` (`kv_id`, `kv_name`, `kv_plate`) VALUES
+(1, 'Aruz', 'VLR 4711'),
+(2, 'Fortuner', 'BJG 2783'),
+(3, 'Van', 'WSC 5483'),
+(4, 'Bas', 'WKK 6769');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `file_eken`
+--
+
+CREATE TABLE `file_eken` (
+  `f_name` varchar(70) NOT NULL,
+  `f_path` varchar(20) NOT NULL,
+  `f_timeStamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `file_eken`
+--
+
+INSERT INTO `file_eken` (`f_name`, `f_path`, `f_timeStamp`) VALUES
+('BORANG PERMOHONAN JAWATAN.pdf', '../eken/', '2024-11-19 23:23:39'),
+('LOGO MAKWE.pdf', '../eken/', '2024-12-16 17:43:29'),
+('MUHAMMAD ALIF ISKANDAR DAT.pdf', '../eken/', '2024-12-02 20:18:44'),
+('sijil fabrika gerpi.pdf', '../eken/', '2024-12-16 17:33:28'),
+('View.pdf', '../eken/', '2024-12-08 17:25:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ictform`
+--
+
+CREATE TABLE `ictform` (
+  `if_id` int(7) NOT NULL,
+  `if_purpose` varchar(70) NOT NULL,
+  `if_place` varchar(30) NOT NULL,
+  `if_borrowDate` date NOT NULL,
+  `if_xReturnDate` date NOT NULL,
+  `if_status` varchar(10) NOT NULL,
+  `s_id` int(11) DEFAULT NULL,
+  `a_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ictitem`
+--
+
+CREATE TABLE `ictitem` (
+  `ii_id` int(5) NOT NULL,
+  `ii_name` varchar(20) NOT NULL,
+  `ii_qoh` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ictitem`
+--
+
+INSERT INTO `ictitem` (`ii_id`, `ii_name`, `ii_qoh`) VALUES
+(2, 'Laptop', 12),
+(3, 'Camera', 3),
+(4, 'Projector', 4),
+(5, 'Drone', 1),
+(6, 'P.A. system', 1),
+(7, 'Wi-Fi adapter', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ictlist`
+--
+
+CREATE TABLE `ictlist` (
+  `il_id` int(9) NOT NULL,
+  `ii_id` int(5) NOT NULL,
+  `il_qty` int(3) NOT NULL,
+  `il_status` varchar(12) NOT NULL,
+  `if_id` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+  `s_id` int(5) NOT NULL,
+  `s_name` varchar(50) NOT NULL,
+  `s_email` varchar(30) NOT NULL,
+  `s_phone` varchar(12) NOT NULL,
+  `s_position` varchar(20) NOT NULL,
+  `s_password` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`s_id`, `s_name`, `s_email`, `s_phone`, `s_position`, `s_password`) VALUES
+(6, 'Harith Affendi', 'harith@staf.kksbs.edu.my', '0106477394', 'Intern IT', '$2y$12$T.9fB5b6TiUacTv.sAzNAewItLMWAp0eBCxjcDSNyooSa3A6q4t2q'),
+(7, 'Ahmad Faris', 'faris@staf.kksbs.edu.my', '01012345678', 'Head IT', '$2y$12$VIl3euxZ/rBjCI/7wog.yuEH6QXxweCuYdzSIABDsYhO1nVt78X16'),
+(8, 'Irfan Wafi', 'wafi@staf.kksbs.edu.my', '01234567890', 'Programmer', '$2y$12$1ovNegqkTrAtwellMzClAeoTifBSF3kEATFhPZUDLBoJZlXJu2YX6'),
+(11, 'Abu', 'abu@staf.kksbs.edu.my', '01010101010', 'Head of IT', '$2y$12$RieeRehfrCjVk6f5zOhXFu.2eST/.TKGvgJDj5kI0/FWHC8u1HeIu');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`a_id`);
+
+--
+-- Indexes for table `driver`
+--
+ALTER TABLE `driver`
+  ADD PRIMARY KEY (`d_id`),
+  ADD KEY `kf_id` (`kf_id`);
+
+--
+-- Indexes for table `ekenform`
+--
+ALTER TABLE `ekenform`
+  ADD PRIMARY KEY (`kf_id`),
+  ADD KEY `f_name` (`f_name`),
+  ADD KEY `ekenform_ibfk_1` (`s_id`),
+  ADD KEY `ekenform_ibfk_6` (`a_id`);
+
+--
+-- Indexes for table `ekenlist`
+--
+ALTER TABLE `ekenlist`
+  ADD PRIMARY KEY (`kl_id`),
+  ADD KEY `kv_id` (`kv_id`),
+  ADD KEY `ekenlist_ibfk_2` (`kf_id`);
+
+--
+-- Indexes for table `ekenvehicle`
+--
+ALTER TABLE `ekenvehicle`
+  ADD PRIMARY KEY (`kv_id`);
+
+--
+-- Indexes for table `file_eken`
+--
+ALTER TABLE `file_eken`
+  ADD PRIMARY KEY (`f_name`);
+
+--
+-- Indexes for table `ictform`
+--
+ALTER TABLE `ictform`
+  ADD PRIMARY KEY (`if_id`);
+
+--
+-- Indexes for table `ictitem`
+--
+ALTER TABLE `ictitem`
+  ADD PRIMARY KEY (`ii_id`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`s_id`),
+  ADD UNIQUE KEY `s_email` (`s_email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `a_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `driver`
+--
+ALTER TABLE `driver`
+  MODIFY `d_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `ekenlist`
+--
+ALTER TABLE `ekenlist`
+  MODIFY `kl_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `ekenvehicle`
+--
+ALTER TABLE `ekenvehicle`
+  MODIFY `kv_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `ictform`
+--
+ALTER TABLE `ictform`
+  MODIFY `if_id` int(7) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ictitem`
+--
+ALTER TABLE `ictitem`
+  MODIFY `ii_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `s_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `driver`
+--
+ALTER TABLE `driver`
+  ADD CONSTRAINT `driver_ibfk_1` FOREIGN KEY (`kf_id`) REFERENCES `ekenform` (`kf_id`);
+
+--
+-- Constraints for table `ekenform`
+--
+ALTER TABLE `ekenform`
+  ADD CONSTRAINT `ekenform_ibfk_1` FOREIGN KEY (`s_id`) REFERENCES `staff` (`s_id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `ekenform_ibfk_5` FOREIGN KEY (`f_name`) REFERENCES `file_eken` (`f_name`),
+  ADD CONSTRAINT `ekenform_ibfk_6` FOREIGN KEY (`a_id`) REFERENCES `admins` (`a_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `ekenlist`
+--
+ALTER TABLE `ekenlist`
+  ADD CONSTRAINT `ekenlist_ibfk_2` FOREIGN KEY (`kf_id`) REFERENCES `ekenform` (`kf_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ekenlist_ibfk_3` FOREIGN KEY (`kv_id`) REFERENCES `ekenvehicle` (`kv_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

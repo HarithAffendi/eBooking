@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css" type="text/css">
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <img src="../img/ebooking.png" alt="Logo KKSB">
+</header>
+
+<main class="wrapper-main">
+<div class="main">
+    <h1>Login</h1>
+
+    <form action="">
+        <label for="email">Email</label>
+        <br>
+        <input required class="input" type="email" placeholder="Enter your email" id="email" name="email">
+        <br>
+        <span class="error email-error"></span>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <div class="wrapper-input">
+            <input required class="input" type="password" placeholder="Enter your password" id="password" name="password">
+            <img src="../icon/hide.png" id="eyeicon">
+        </div>
+        <br>
+        <span class="error password-error"></span>
+        <br><br>
+        <div class="wrapper-button">
+            <button type="submit">Login</button>
+        </div>
+        <br>
+        
+    </form>
+    <!-- TODO: figure out how to do the "forgot password" -->
+    <div class="container">
+        <a href="">Forgot password?</a> | <a href="">Sign up</a>
+    </div>
+</div>
+</main>
+
+<footer>
+        <p><b>Hak Milik : KOLEJ KOMUNITI SABAK BERNAM</b></p>
+</footer>
+
+<dialog class="modal">
+    <h1 class="modal-h1"></h1>
+    <p class="modal-text"></p>
+    <br>
+    <button id="modal-button" type="button">Ok</button>
+</dialog>
+
+<dialog class="modal-error">
+    <h1>Error</h1>
+    <p class="modal-p-error"></p>
+    <br>
+    <button id="error-button">Ok</button>
+</dialog>
+
+<script src="../JS/login.js?=time()" defer></script>
+</body>
+</html>

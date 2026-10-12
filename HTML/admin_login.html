@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/admin_login.css?=time()">
+    <title>Admin login</title>
+</head>
+<body>
+    <header>
+        <img id="nav-toggle" src="../icon/list.png">
+        <img src="../img/ebooking.png" alt="Logo KKSB">
+    </header>
+
+    <!-- side bar -->
+    <section class="sidenav">
+    <h1>Navigation</h1>
+        <div class="wrapper-nav">
+            <label>
+                <ul>
+                    <li><a href="homepage.php"><img src="../icon/home.png"> Homepage</a></li>
+                    <li><a href=""><img src="../icon/check-list.png"> View Status</a></li>
+                    <li><a href=""><img src="../icon/calendar.png"> View calendar</a></li>
+                    <li><a href=""><img src="../icon/editing.png"> Edit Profile</a></li>
+                    <li><a href=""><img src="../icon/setting.png"> Admin Login</a></li>
+                    <li><a href="" id="logout"><img src="../icon/logout.png"> Logout</a></li>
+                </ul>
+            </label>
+        </div>
+    </section>
+    <section class="content">
+        <main>
+            <div class="wrapper-form">
+                <h1>Admin login</h1>
+
+                <form action="">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <span class="error email-error"></span>
+                    
+                    <br>
+
+                    <label for="password">Password</label>
+                    <br>
+                    <div class="wrapper-password">
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                        <img src="../icon/hide.png" id="password-toggle">
+                    </div>
+                    <span class="error password-error"></span>
+                    <br>
+
+                    <div class="wrapper-button">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <p><b>Hak Milik : KOLEJ KOMUNITI SABAK BERNAM</b></p>
+    </footer>
+
+
+    <script src="../JS/admin_login.js?=time()"></script>
+</body>
+</html>

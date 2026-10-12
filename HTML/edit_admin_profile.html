@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/edit_admin_profile.css?=time()">
+    <title>Edit Admin Details</title>
+</head>
+<body>
+    <header>
+        <img id="nav-toggle" src="../icon/list.png">
+        <img src="../img/ebooking.png" alt="Logo KKSB">
+    </header>
+    <!-- side bar -->
+    <section class="sidenav">
+    <h1>Navigation</h1>
+        <div class="wrapper-nav">
+            <label>
+                <ul>
+                    <li><a href="homepage.php"><img src="../icon/home.png"> Homepage</a></li>
+                    <li><a href=""><img src="../icon/check-list.png"> View Status</a></li>
+                    <li><a href=""><img src="../icon/calendar.png"> View calendar</a></li>
+                    <li><a href=""><img src="../icon/editing.png"> Edit Profile</a></li>
+                    <li><a href="" id="logout"><img src="../icon/logout.png"> Logout</a></li>
+                </ul>
+            </label>
+        </div>
+    </section>
+
+    <section class="content">
+        <main>
+            <div class="wrapper-form">
+                <h1>User Profile</h1>
+                <form id="mainForm" action="">
+                    <div class="wrapper-input">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="wrapper-error">
+                        <span class="error name-error"></span>
+                    </div>
+    
+                    <div class="wrapper-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="wrapper-error">
+                        <span class="error email-error"></span>
+                    </div>
+    
+                    <div class="wrapper-input">
+                        <label for="position">Position</label>
+                        <input type="text" name="position" id="position">
+                    </div>
+                    <div class="wrapper-error">
+                        <span class="error position-error"></span>
+                    </div>
+    
+                    <div class="wrapper-input">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div class="wrapper-error">
+                        <span class="error name-error"></span>
+                    </div>
+
+                    <br>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Save</button>
+    
+                </form>
+            </div>
+        </main>
+
+    </section>
+
+    <footer>
+        <p><b>Hak Milik : KOLEJ KOMUNITI SABAK BERNAM</b></p>
+    </footer>
+
+    <script src="../JS/edit_admin_profile.js?=time()"></script>
+</body>
+</html>

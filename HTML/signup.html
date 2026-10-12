@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/signup.css" type="text/css">
+    <title>Sign Up</title>
+</head>
+<body>
+
+<header>
+    <img src="../img/ebooking.png" alt="Logo KKSB">
+</header>
+
+<div class="wrapper-main">
+    <main>
+        <h1>Sign Up</h1>
+
+            <form id="myForm" action="" autocomplete="off">
+                <label for="name">Name</label>
+                <br>
+                <input class="input" type="text" id="name" name="name" placeholder="Enter your name">
+                <br>
+                <span class="error name-error"></span>
+                <br>
+
+                <label for="email">Email</label>
+                <br>
+                <input class="input" type="email" id="email" name="email" placeholder="Enter your email">
+                <br>
+                <span class="error email-error"></span>
+                <br>
+                
+                <label for="position">Position</label>
+                <br>
+                <input class="input" type="text" id="position" name="position" placeholder="Enter your position">
+                <br>
+                <span class="error position-error"></span>
+                <br>
+
+                <label for="phone">Phone Number</label>
+                <br>
+                <input class="input" type="text" id="phone" name="phone" placeholder="Enter your phone number">
+                <br>
+                <span class="error phone-error"></span>
+                <br>  
+
+                <label for="password">Password</label>
+                <br>
+                <div class="wrapper-input">
+                    <input class="input" type="password" id="password" name="password" placeholder="Enter your password">
+                    <img src="../icon/hide.png" id="passIcon">
+                </div>
+                <br>
+                <span class="error password-error"></span>
+
+                <br>
+                <label for="conPass">Confirm Password</label>
+                <br>                
+                <div class="wrapper-input">
+                    <input class="input" type="password" id="conPass" name="conPass" placeholder="Confirm your password">
+                    <img src="../icon/hide.png" id="conPassIcon">
+                </div>
+                <br>
+                <span class="error conPassword-error"></span>
+
+                <br><br>
+                <div class="wrapper-button">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <br>
+        <a href="">Login</a>
+    </main>
+</div>
+
+<footer>
+    <p><b>Hak Milik : KOLEJ KOMUNITI SABAK BERNAM</b></p>
+</footer>
+
+<script src="../JS/signup.js"></script>
+</body>
+</html>

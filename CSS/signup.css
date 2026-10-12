@@ -1,0 +1,182 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: lightblue;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    padding: 1rem;
+}
+
+header img {
+    height: 3rem;
+}
+
+.wrapper-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 50ch;
+    padding: 0.5rem;
+    margin: 5rem 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.wrapper-input {
+    display: flex;
+    position: relative;
+}
+
+.wrapper-input img {
+    width: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.3rem;
+}
+
+input:focus {
+    outline: 1px solid rgb(64, 64, 252) ;
+}
+
+.input {
+    font-size: 1rem;
+    width: 35ch;
+    padding: 0.4rem;
+    border: 1px solid gray;
+    border-radius: 0.4rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+.error{
+    font-family: 'Trebuchet MS', sans-serif;
+    width: 39ch;
+    color: #af4242;
+	background-color: #fde8ec;
+    font-size: 1rem;
+    display: block;
+}
+
+.wrapper-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(61, 61, 190);
+    color: white;
+    border: 0;
+    font-size: 1.2rem;
+    padding: 0.6em;
+    border-radius: 1em;
+    margin: 0.5em;
+}
+
+button:hover {
+    background-color: rgb(58, 58, 146);
+    cursor: pointer;
+}
+
+a {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    margin-bottom: 1.2rem;
+}
+
+footer {
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+dialog {
+    font-size: 1rem;
+    max-width: 70ch;
+    min-width: 30ch;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+}
+
+.modal {
+    border: 2px solid rgb(90, 212, 90);
+}
+
+.modal-error{
+    border: 2px solid rgb(218, 36, 36);
+}
+
+
+@media (max-width: 425px){
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    .input {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 0.7rem;
+    }
+
+    .error {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    dialog {
+        font-size: 0.8rem;
+    }
+}
